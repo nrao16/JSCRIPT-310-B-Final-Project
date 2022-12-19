@@ -1,0 +1,15 @@
+input:valid{
+    border: 1px solid lightseagreen
+}
+
+input:invalid {
+  border: 1px solid tomato
+}
+
+.error {
+ color: darkred
+}
+
+.hide {
+    display: none
+}

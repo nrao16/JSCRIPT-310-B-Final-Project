@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Best Books</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="bestSellerBooks.css">
+  <link rel="stylesheet" href="constraint-validation.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-12">
+        <h2 class="text-center">Best Seller Books</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <form novalidate id="best-books-form">
+          <div class="form-group">
+            <label for="year" id="year-label">Year</label>
+            <input 
+              id="year"
+              name="year" 
+              class="form-control validate-input" 
+              type="text" 
+              pattern="\d{4}" 
+              required
+              min=2009
+              placeholder="2022" />
+              <small class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="month" id="month-label">Month</label>
+            <input 
+              id="month" 
+              name="month" 
+              class="form-control validate-input" 
+              type="text" 
+              placeholder="12"
+              pattern="\d{2}"
+              min="01"
+              max="12"
+              required
+               />
+               <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="form-group">
+            <label for="date" id="date-label">Date</label>
+            <input 
+              id="date"
+              name="date" 
+              class="form-control validate-input" 
+              type="text" 
+              placeholder="18"
+              pattern="\d{2}"
+              min="01"
+              max="31"
+              required
+              />
+          </div>
+          <div class="form-group">
+            <input id="submit" class="btn btn-primary" type="submit" value="Get Best Sellers" />
+          </div>     
+          <div class="form-group">
+            <input id="viewBookBag" class="btn btn-primary" type="button" value="View My Book Bag" />
+          </div>
+         
+        </form>
+      </div>
+
+      <div class="col-md-7 offset-md-1" id="books-container">
+      </div>
+      </div>
+  </div>
+
+  <script src="api-key.js"></script>
+  <script src="bestSellerBooks.js"></script>
+  <script src="bestSellerBooksModels.js"></script>
+</body>
+</html>
