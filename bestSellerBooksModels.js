@@ -1,15 +1,14 @@
 /**
  * Represents a book.
  * @constructor
- * @param {string} isbn
+ * @param {string} primary_isbn13
+ * @param {string} author
  * @param {string} title
  * @param {string} rank
- * @param {string} description
- * @param {img} book_image
  */
 const Book = class {
-    constructor(isbn, author, title, rank) {
-        this.isbn = isbn;
+    constructor(primary_isbn13, author, title, rank) {
+        this.primary_isbn13 = primary_isbn13;
         this.author = author;
         this.title = title;
         this.rank = rank;
@@ -19,7 +18,7 @@ const Book = class {
 
     // override prototype
     toString() {
-        return (`${this.title}(isbn-${this.isbn}) by ${this.author} ranked ${this.rank} on the ${Book.BestSellerList} best seller list.`);
+        return (`${this.primary_isbn13},${this.author},${this.title},${this.rank}`);
     }
 
 };

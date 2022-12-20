@@ -1,3 +1,21 @@
 img {
   max-width: 150px;
 }
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #bc1a6b;
+  color: white;
+  font-size: 30px;
+}
+
+.date {
+  padding: 5px;
+  color: black;
+  font-size: 15px;
+}
+
+h3 
+{ background: antiquewhite;color: #1e1e62; font-family: Arial, Helvetica, sans-serif; font-size: 20px; padding: 1px 0; 
+}
